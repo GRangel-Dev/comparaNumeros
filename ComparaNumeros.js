@@ -1,12 +1,12 @@
 function comparaNumeros(n1, n2) {
      if(!n1 || !n2) return `Defina dois números`;
-	const frase1 = PRIMEIRA_FRASE(n1, n2);
-	const frase2 = SEGUNDA_FRASE(n1, n2);
+	const FRASE1 = primeiraFrase(n1, n2);
+	const FRASE2 = segundaFrase(n1, n2);
 
-	return `${frase1} ${frase2}`;
+	return `${FRASE1} ${FRASE2}`;
 }
 
-function PRIMEIRA_FRASE(n1, n2) {
+function primeiraFrase(n1, n2) {
 	let simOuNao = '';
 
 	if (n1 !== n2) {
@@ -16,21 +16,21 @@ function PRIMEIRA_FRASE(n1, n2) {
 	return `Os números ${n1} e ${n2} ${simOuNao} são iguais.`;
 }
 
-function SEGUNDA_FRASE(n1, n2) {
-	const soma = n1 + n2;
+function segundaFrase(n1, n2) {
+	const SOMA = n1 + n2;
 
 	let resultDez = 'menor';
 	let resultVinte = 'menor';
 
-	if (soma > 10) {
+	if (SOMA > 10) {
 		resultDez = 'maior';
 	}
 
-	if (soma > 20) {
+	if (SOMA > 20) {
 		resultVinte = 'maior';
 	}
 
-	return `Sua soma é ${soma}, que é ${resultDez} do que 10 e ${resultVinte} do que 20.`;
+	return `Sua soma é ${SOMA}, que é ${resultDez} do que 10 e ${resultVinte} do que 20.`;
 }
 
 console.log(comparaNumeros(1, 10));
